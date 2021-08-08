@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "./build.bat",
+            "options": {
+                "cwd": "./scripts"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "upload",
+            "type": "shell",
+            "command": "./make.bat upload",
+            "options": {
+                "cwd": "./scripts"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "monitor",
+            "type": "shell",
+            "command": "./make.bat monitor",
+            "options": {
+                "cwd": "./scripts"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "upload_monitor",
+            "type": "shell",
+            "dependsOn": ["upload", "monitor"],
+            "dependsOrder": "sequence",
+            "group": "build",
+            "problemMatcher": [],
+        }
+    ]
+}
