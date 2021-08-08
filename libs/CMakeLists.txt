@@ -1,0 +1,1 @@
+# add_library(MY_LIB STATIC ${PATH})
